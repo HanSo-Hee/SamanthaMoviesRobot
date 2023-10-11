@@ -16,23 +16,23 @@ PORT = environ.get("PORT", "8000")
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '2387090'))
 API_HASH = environ.get('API_HASH', 'e9ca814a5c4fbc1c4ec93edbc8cac0af')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5630559651:AAHGJR9kNeSzCRhAlIb6dLsUTAZSUy_kQsI')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Bot images & videos
-PICS = (environ.get('PICS', 'https://telegra.ph/file/5553dc39f968b364d4856.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/9d4e82b2ceca0ad243e4d.jpg https://telegra.ph/file/97be93e04b8d00b5f414b.jpg https://telegra.ph/file/db59e387258926d18e5e5.jpg https://telegra.ph/file/bb3c7b7b594032abfd678.jpg https://telegra.ph/file/90411b24a3db27d01cf7b.jpg https://telegra.ph/file/b835c1ee6ae4f0328e6d9.jpg https://telegra.ph/file/949a2b90058deb14f93d9.jpg https://telegra.ph/file/a3b444e0004b600f11b85.jpg https://telegra.ph/file/fbbbc141dbf188588e39f.jpg https://telegra.ph/file/803c648225163fbc9dfb4.jpg https://telegra.ph/file/db551facec58b241666e1.jpg https://telegra.ph/file/693acba9323336cb5ddd5.jpg https://telegra.ph/file/bf3d7a8f34c3ac137d648.jpg https://telegra.ph/file/c16d218a992668161a041.jpg https://telegra.ph/file/07fcdbb883ac3b713eff0.jpg https://telegra.ph/file/4fb7600bb125fe2c0fda9.jpg https://telegra.ph/file/584339164427b13e3418f.jpg https://telegra.ph/file/44aa76db933c938eb0530.jpg https://telegra.ph/file/ca9b781058fb53e2d00eb.jpg https://telegra.ph/file/69626d67a683967d13504.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/0593a3103ba1b9a5855bf.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://te.legra.ph/file/485b93dd1ec801061f091.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2a888a370f479f4338f7c.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1287407305').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001382608728')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -43,24 +43,24 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://eeshabot:eeshabot@cluster0.tlau5cc.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "eesha")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'raixchat')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001526049216'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'KDrama_Requests')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '📂 <em>File Name</em>: <code>FileName|{file_name}</code> \n\n🖇 <em>File Size</em>: <code>{file_size}</code> \n\n❤️‍🔥 </i>Join</i> [TeleRoid Group](https://t.me/OwnYourBotz)  \n\n🖥 <i>Requests</i> - ||@TeleRoid14|| ')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '📂 <em>File Name</em>: <code>FileName|{file_name}</code> \n\n🖇 <em>File Size</em>: <code>{file_size}</code> \n\n❤️‍🔥 </i>Join</i> [TeleRoid Group](https://t.me/OwnYourBotz)  \n\n🖥 <i>Requests</i> - ||@KDrama_Requests|| ')
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '')
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", '🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [Korean Dramas](t.me/KdramasFlix)')
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", '🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [Korean Dramas](t.me/KDramasFlix)')
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
